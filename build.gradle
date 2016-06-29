@@ -1,0 +1,20 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile ('org.slf4j:slf4j-api:1.7.12') {transitive = false}
+    compile ('org.slf4j:slf4j-simple:1.7.12') {transitive = false}
+    compile ('org.mongodb:mongodb-driver:3.2.2') {transitive = false}
+    compile ('org.mongodb:bson:3.2.2') {transitive = false}
+    compile ('org.mongodb:mongodb-driver-core:3.2.2') {transitive = false}
+    testCompile ('junit:junit:4.12')
+}
+
+task run(type: JavaExec) {
+    main = "org.gregm.Example" 
+    classpath = sourceSets.main.runtimeClasspath
+
+}
