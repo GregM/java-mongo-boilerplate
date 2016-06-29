@@ -16,5 +16,4 @@ dependencies {
 task run(type: JavaExec) {
     main = "org.gregm.Example" 
     classpath = sourceSets.main.runtimeClasspath
-
 }
